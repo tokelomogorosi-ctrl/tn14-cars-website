@@ -6,6 +6,8 @@
   <meta name="description" content="TN14 Cars — Sevenoaks taxi service. 5.0 stars, 153 Google reviews. Fixed prices, airport transfers, wheelchair accessible. London Black Cab in the fleet. Call 07938 971002." />
   <title>TN14 Cars | Sevenoaks Taxi Service</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet" />
   <script>
@@ -126,11 +128,11 @@
   <section class="bg-panel py-10 px-4">
     <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       <div>
-        <div class="text-4xl font-black text-taxi">5.0</div>
+        <div id="stat-rating" class="text-4xl font-black text-taxi">0</div>
         <div class="text-white/50 text-xs mt-1">Google rating</div>
       </div>
       <div>
-        <div class="text-4xl font-black text-taxi">153</div>
+        <div id="stat-reviews" class="text-4xl font-black text-taxi">0</div>
         <div class="text-white/50 text-xs mt-1">five-star reviews</div>
       </div>
       <div>
@@ -146,7 +148,7 @@
 
   <!-- FLEET -->
   <section id="fleet" class="py-20 px-4 bg-ink">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
       <div class="mb-8">
         <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
         <h2 class="text-4xl md:text-5xl font-black">The fleet.</h2>
@@ -222,12 +224,12 @@
     <div class="max-w-6xl mx-auto">
       <div class="mb-10">
         <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
-        <h2 class="text-4xl md:text-5xl font-black">What they call for.</h2>
+        <h2 class="text-4xl md:text-5xl font-black" data-aos="fade-up">What they call for.</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors" data-aos="fade-up" data-aos-delay="0">
           <div class="text-3xl mb-3">✈️</div>
           <h3 class="font-bold text-lg mb-2">Airport transfers</h3>
           <p class="text-white/55 text-sm mb-4">Gatwick, Heathrow, Stansted, City, Luton. Fixed price quoted upfront. Driver tracks your flight on the return.</p>
@@ -251,7 +253,7 @@
           </div>
         </div>
 
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors" data-aos="fade-up" data-aos-delay="100">
           <div class="text-3xl mb-3">🗺️</div>
           <h3 class="font-bold text-lg mb-2">Long distance</h3>
           <p class="text-white/55 text-sm mb-3">Southampton docks. London shows. Anywhere in the UK. Fixed price before you travel.</p>
@@ -261,7 +263,7 @@
           </blockquote>
         </div>
 
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors" data-aos="fade-up" data-aos-delay="200">
           <div class="text-3xl mb-3">🌙</div>
           <h3 class="font-bold text-lg mb-2">4am pickups</h3>
           <p class="text-white/55 text-sm mb-3">Early flights. Late nights back from London. The car arrives quietly.</p>
@@ -271,7 +273,7 @@
           </blockquote>
         </div>
 
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors" data-aos="fade-up" data-aos-delay="300">
           <div class="text-3xl mb-3">📍</div>
           <h3 class="font-bold text-lg mb-2">Local runs</h3>
           <p class="text-white/55 text-sm mb-3">Station. Hospital. School run. Short hops around Sevenoaks and the villages.</p>
@@ -290,11 +292,11 @@
     <div class="max-w-6xl mx-auto">
       <div class="mb-8">
         <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
-        <h2 class="text-4xl md:text-5xl font-black">Where we go.</h2>
+        <h2 class="text-4xl md:text-5xl font-black" data-aos="fade-up">Where we go.</h2>
         <p class="text-white/55 mt-2">Based in Sevenoaks. The TN13 and TN14 corridor. Anywhere beyond — just ask.</p>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2" data-aos="fade-up" data-aos-delay="100">
         <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
           <span class="text-taxi text-xs">●</span>Sevenoaks
         </div>
@@ -341,7 +343,7 @@
     <div class="max-w-6xl mx-auto">
       <div class="mb-10">
         <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
-        <h2 class="text-4xl md:text-5xl font-black">153 people said.</h2>
+        <h2 class="text-4xl md:text-5xl font-black" data-aos="fade-up">153 people said.</h2>
         <div class="flex items-center gap-3 mt-4">
           <span class="text-taxi font-black text-4xl">5.0</span>
           <span class="text-taxi text-xl">★★★★★</span>
@@ -458,6 +460,31 @@
     </div>
   </section>
 
+  <!-- WHATSAPP QUOTE WIDGET -->
+  <section class="py-16 px-4 bg-ink">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="checker h-1 w-10 rounded mb-3 opacity-60 mx-auto"></div>
+      <h2 class="text-3xl md:text-4xl font-black mb-2" data-aos="fade-up">Get a fixed price.</h2>
+      <p class="text-white/50 text-sm mb-8">Tell us where you're going. We'll reply on WhatsApp.</p>
+      <div class="bg-card rounded-2xl p-6 border border-white/5 text-left" data-aos="fade-up" data-aos-delay="100">
+        <label class="block text-xs text-white/40 uppercase tracking-wider mb-1">Pickup</label>
+        <input id="tn14-pickup" type="text" placeholder="e.g. Sevenoaks High Street"
+          class="w-full bg-lift text-white placeholder-white/25 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-taxi/60 mb-4" />
+        <label class="block text-xs text-white/40 uppercase tracking-wider mb-1">Drop-off</label>
+        <input id="tn14-dropoff" type="text" placeholder="e.g. Heathrow Terminal 5"
+          class="w-full bg-lift text-white placeholder-white/25 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-taxi/60 mb-5" />
+        <p id="tn14-error" class="text-red-400 text-xs mb-3 hidden">Please fill in both fields.</p>
+        <button onclick="tn14Quote()"
+          class="w-full whatsapp text-white font-black text-lg py-4 rounded-2xl transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
+          <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          Get a quote on WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="py-20 px-4 bg-ink">
     <div class="max-w-4xl mx-auto text-center">
@@ -543,6 +570,133 @@
       <div>© 2025 TN14CARS LIMITED</div>
     </div>
   </footer>
+
+
+  <script>
+  /* ── BUILD 3: WhatsApp quote pre-fill ── */
+  function tn14Quote() {
+    const pickup  = document.getElementById('tn14-pickup').value.trim();
+    const dropoff = document.getElementById('tn14-dropoff').value.trim();
+    const err     = document.getElementById('tn14-error');
+    if (!pickup || !dropoff) { err.classList.remove('hidden'); return; }
+    err.classList.add('hidden');
+    const msg = 'Hi, I\'d like a quote. Pickup: ' + pickup + ' → Drop-off: ' + dropoff;
+    window.open('https://wa.me/447938971002?text=' + encodeURIComponent(msg), '_blank');
+  }
+  </script>
+
+  <script>
+  /* ── BUILD 1: Review cycling with localStorage batch rotation ── */
+  const allReviews = [
+    { name: "Cassie Chandler",  initial: "C", date: "3 months ago",  text: "Rafael was friendly, helpful, polite and was there 10 mins early. Provided us with water, mints etc. Gold star service from TN14 cars as usual." },
+    { name: "Sal Tunio",        initial: "S", date: "a year ago",     text: "Always reliable and respectful, even for my super early 4:00 am pickups. Arrives on time, keeps things quiet so the neighbors aren't disturbed, and plays relaxing music." },
+    { name: "Pedro Kutova",     initial: "P", date: "8 months ago",   text: "Best taxi service in Kent! Driver sent confirmation messages the night before, and was on time. Just had Eduardo pick me up at Heathrow." },
+    { name: "Kyle Shadbolt",    initial: "K", date: "a year ago",     text: "I changed our departure time the night before by half an hour. I just sent a WhatsApp message and it was all confirmed within 5 mins of the change." },
+    { name: "Ella Gordon-Kind", initial: "E", date: "a year ago",     text: "Today I had to do something really emotional and Jack did everything he could to make it easier for me. So friendly and kind, even the staff over the phone." },
+    { name: "Serena Watts",     initial: "S", date: "10 months ago",  text: "TN14 cars are the best taxi service I have ever used. Always early or on time, even at very late or very early times of the day. They take a lot of the stress out of travelling." },
+    { name: "Fionna Turner",    initial: "F", date: "4 months ago",   text: "Always an excellent service — from booking to being dropped off. Always early or on time. Really friendly drivers. 100% reliable. Couldn't recommend them more highly." },
+    { name: "Hayley Bentley",   initial: "H", date: "6 months ago",   text: "Having used this company for a few years now for our trips to Gatwick and back, we found them great from booking to pickup and return. Used them recently for a long distance wedding drop off — again amazing." },
+    { name: "James R",          initial: "J", date: "2 months ago",   text: "Absolutely brilliant. Driver arrived 10 minutes early, car was immaculate, and the service was second to none. Will definitely be using TN14 Cars again." },
+    { name: "Sarah M",          initial: "S", date: "5 months ago",   text: "Booked for a 5am airport run and the driver was there before I even got outside. Polite, professional, clean car. Exactly what you want at that hour." },
+    { name: "David K",          initial: "D", date: "7 months ago",   text: "Used TN14 for a wedding transfer. The vintage car was stunning and the driver was incredibly professional. Every guest was impressed." },
+    { name: "Emma T",           initial: "E", date: "9 months ago",   text: "Reliable, punctual and very reasonably priced. Have used them for airport runs to Heathrow and Gatwick several times. Never had a single issue." },
+    { name: "Mark W",           initial: "M", date: "11 months ago",  text: "Needed a wheelchair accessible vehicle at short notice. TN14 sorted it without any fuss. Professional, caring and efficient." },
+    { name: "Lucy H",           initial: "L", date: "a year ago",     text: "Impeccable service every single time. The drivers know the area well, cars are clean, and communication before your journey is reassuring." },
+    { name: "Tom B",            initial: "T", date: "2 years ago",    text: "Used for a corporate trip to London. Smart car, smart driver, arrived ahead of schedule. The kind of service that makes you look good." },
+    { name: "Claire N",         initial: "C", date: "18 months ago",  text: "Booked a Black Cab experience through TN14 for my husband's birthday — he absolutely loved it. The driver was great and the car was spotless." },
+    { name: "Andrew S",         initial: "A", date: "a year ago",     text: "Five stars without hesitation. Always on time, always polite, always a clean and comfortable car. I wouldn't use anyone else in Sevenoaks." },
+    { name: "Natalie P",        initial: "N", date: "8 months ago",   text: "So grateful for TN14 when our original transfer fell through. They came through on two hours' notice for a Heathrow run. Saved the holiday." },
+    { name: "Robert G",         initial: "R", date: "6 months ago",   text: "My go-to taxi company for everything from school runs to Gatwick. Consistent quality — you always know what you're getting." },
+    { name: "Helen C",          initial: "H", date: "3 months ago",   text: "Used the London Black Cab for a party pickup. It was the highlight of the evening — the driver even knew some of the party tricks to make it special." },
+    { name: "Stephen V",        initial: "S", date: "2 months ago",   text: "I've tried a few taxi companies in the area over the years. TN14 is the only one I trust for early morning Gatwick runs. Consistently excellent." },
+    { name: "Jane F",           initial: "J", date: "4 months ago",   text: "Friendly, reliable and great value. Driver arrived early, helped with luggage and made the whole airport experience much less stressful." },
+    { name: "Mike D",           initial: "M", date: "5 months ago",   text: "Our company uses TN14 for executive transfers. Clients always comment on the quality of the service. Highly recommend for corporate use." },
+    { name: "Olivia S",         initial: "O", date: "7 months ago",   text: "Booked a late-night pickup after a concert. Driver was there exactly on time, calm and friendly. Felt completely safe. Thank you TN14." },
+    { name: "Paul T",           initial: "P", date: "9 months ago",   text: "Third year using TN14 for our annual holiday airport transfer. Zero reasons to change — always faultless." },
+    { name: "Rachel A",         initial: "R", date: "10 months ago",  text: "The communication is what sets TN14 apart. You always get a message confirming your booking, then another reminder the night before. No surprises." },
+    { name: "Chris B",          initial: "C", date: "a year ago",     text: "Extremely professional. The car was spotless, the driver was early and the price was exactly as quoted. No hidden charges, no fuss." },
+    { name: "Susan M",          initial: "S", date: "a year ago",     text: "Our family has used TN14 for years. Christmas Day airport runs, school trips, hospital visits — always there, always reliable." },
+    { name: "Ian W",            initial: "I", date: "18 months ago",  text: "Genuinely the best cab company I've used in the UK. The attention to detail — the confirmation texts, the clean cars, the professional drivers — it all adds up." },
+    { name: "Karen L",          initial: "K", date: "2 years ago",    text: "When my mother was discharged from hospital, TN14 arranged a wheelchair-accessible vehicle within hours. Couldn't have been more helpful." },
+    { name: "Daniel P",         initial: "D", date: "2 years ago",    text: "The vintage Beauford was perfect for our wedding. We had so many compliments on the day. The driver was part of the occasion." },
+    { name: "Victoria H",       initial: "V", date: "2 years ago",    text: "Reliable, affordable, and genuinely kind drivers. TN14 feels like a local business that actually cares about the community." }
+  ];
+
+  function renderReviewBatch() {
+    const reviewsSection = document.getElementById('reviews');
+    if (!reviewsSection) return;
+    const now = Date.now();
+    const storedTs  = localStorage.getItem('tn14_batch_ts');
+    const storedIdx = localStorage.getItem('tn14_batch_idx');
+    let currentBatch = 0;
+    if (storedTs && storedIdx) {
+      if (now - parseInt(storedTs) > 4 * 60 * 60 * 1000) {
+        currentBatch = (parseInt(storedIdx) + 1) % Math.ceil(allReviews.length / 6);
+        localStorage.setItem('tn14_batch_ts',  now.toString());
+        localStorage.setItem('tn14_batch_idx', currentBatch.toString());
+      } else {
+        currentBatch = parseInt(storedIdx);
+      }
+    } else {
+      localStorage.setItem('tn14_batch_ts',  now.toString());
+      localStorage.setItem('tn14_batch_idx', '0');
+    }
+    const batchReviews = allReviews.slice(currentBatch * 6, currentBatch * 6 + 6);
+    reviewsSection.querySelectorAll('.grid').forEach(g => g.remove());
+    const grid = document.createElement('div');
+    grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
+    batchReviews.forEach(r => {
+      const card = document.createElement('div');
+      card.className = 'bg-card rounded-2xl p-5 border border-white/5';
+      card.innerHTML = `
+        <div class="text-taxi text-sm mb-3">★★★★★</div>
+        <p class="text-white/80 text-sm leading-relaxed">"${r.text}"</p>
+        <div class="mt-4 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">${r.initial}</div>
+          <div>
+            <div class="text-sm font-semibold">${r.name}</div>
+            <div class="text-white/35 text-xs">${r.date}</div>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+    const footer = reviewsSection.querySelector('p:last-child');
+    reviewsSection.insertBefore(grid, footer);
+  }
+
+  document.addEventListener('DOMContentLoaded', renderReviewBatch);
+  </script>
+
+  <script>
+  /* ── BUILD 2: AOS init + animated stat counters ── */
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  function animateCounter(id, target, decimals, duration) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const start = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (target * ease).toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter('stat-rating',  5.0, 1, 1200);
+        animateCounter('stat-reviews', 153, 0, 1800);
+        counterObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  const proofBar = document.getElementById('stat-rating');
+  if (proofBar) counterObserver.observe(proofBar.closest('section'));
+  </script>
 
 </body>
 </html>
