@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TN14 Cars – Sevenoaks' trusted local taxi service. Airport transfers, long-distance and local journeys. Call or WhatsApp 07938 971002." />
+  <meta name="description" content="TN14 Cars — Sevenoaks taxi service. 5.0 stars, 153 Google reviews. Fixed prices, airport transfers, wheelchair accessible. London Black Cab in the fleet. Call 07938 971002." />
   <title>TN14 Cars | Sevenoaks Taxi Service</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            taxi: '#FFD000',
-            'taxi-dark': '#E6BB00',
-            dark: '#0a0a0a',
+            taxi: '#FFD700',
+            'taxi-dim': '#E6C200',
+            ink: '#000000',
+            panel: '#0f0f0f',
             card: '#111111',
-            'card-2': '#1a1a1a',
+            lift: '#1a1a1a',
           },
           fontFamily: { sans: ['Inter', 'sans-serif'] },
         },
@@ -26,456 +27,520 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+
+    .checker {
+      background-image: repeating-conic-gradient(#FFD700 0% 25%, #000 0% 50%);
+      background-size: 18px 18px;
+    }
+
+    .neon {
+      color: #FFD700;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.45), 0 0 60px rgba(255, 215, 0, 0.15);
+    }
+
     .hero-bg {
-      background: linear-gradient(135deg, #000000 0%, #111111 50%, #1a1200 100%);
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.88) 60%, rgba(0,0,0,1) 100%),
+        url('images/fleet-brand.webp') center / cover no-repeat;
     }
-    .stripe {
-      background: repeating-linear-gradient(
-        45deg, #FFD000, #FFD000 10px, #000 10px, #000 20px
-      );
-    }
-    .star { color: #FFD000; }
-    .whatsapp-btn { background: #25D366; }
-    .whatsapp-btn:hover { background: #1ebe5a; }
+
+    .whatsapp { background: #25D366; }
+    .whatsapp:hover { background: #1ebe5a; }
+
+    blockquote cite { font-style: normal; }
   </style>
 </head>
-<body class="bg-dark text-white font-sans">
+<body class="bg-ink text-white font-sans antialiased">
 
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-yellow-500/20">
+  <nav class="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <span class="text-2xl">🚕</span>
-        <span class="font-black text-xl tracking-tight">
-          <span class="text-taxi">TN14</span><span class="text-white"> CARS</span>
-        </span>
+        <div class="checker w-5 h-5 rounded-sm opacity-80 flex-shrink-0"></div>
+        <span class="font-black text-xl tracking-tighter neon">TN14CARS</span>
+        <span class="text-white/40 text-sm hidden sm:inline">Sevenoaks</span>
       </div>
       <a href="tel:07938971002"
-         class="bg-taxi text-black font-bold px-4 py-2 rounded-full text-sm hover:bg-taxi-dark transition-colors">
-        📞 07938 971002
+         class="bg-taxi text-black font-black text-sm px-4 py-2 rounded-full hover:bg-taxi-dim transition-colors whitespace-nowrap">
+        07938 971002
       </a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center pt-16">
-    <div class="max-w-6xl mx-auto px-4 py-20 md:py-32">
+  <section class="hero-bg min-h-screen flex items-end pb-16 pt-24">
+    <div class="max-w-6xl mx-auto px-4 w-full">
       <div class="max-w-2xl">
-        <!-- Checker badge -->
-        <div class="inline-flex items-center gap-2 mb-6">
-          <div class="h-1 w-8 stripe rounded"></div>
-          <span class="text-taxi font-semibold text-sm uppercase tracking-widest">Sevenoaks · Est. 2023</span>
-          <div class="h-1 w-8 stripe rounded"></div>
+
+        <div class="flex items-center gap-3 mb-5">
+          <div class="checker h-1 w-16 rounded opacity-70"></div>
+          <span class="text-taxi text-xs font-semibold tracking-widest uppercase">Sevenoaks · Est. 2023</span>
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-black leading-none mb-4">
-          Your Local<br/>
-          <span class="text-taxi">Taxi</span><br/>
-          Sevenoaks
+        <!-- The number that matters -->
+        <div class="flex items-baseline gap-4 mb-1">
+          <span class="text-[7rem] font-black neon leading-none">5.0</span>
+          <div>
+            <div class="text-white font-bold text-xl leading-none">★★★★★</div>
+            <div class="text-white/50 text-sm mt-1">153 Google reviews</div>
+          </div>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mt-3">
+          Your driver texts<br />the night before.
         </h1>
 
-        <p class="text-gray-300 text-lg md:text-xl mb-2">
-          Reliable. Friendly. Fixed prices. Trusted by Sevenoaks residents.
-        </p>
+        <p class="text-white/65 text-lg mt-3 mb-2">Fixed prices. No meters. Named drivers.</p>
 
-        <!-- Social proof bar -->
-        <div class="flex items-center gap-2 mb-8">
-          <div class="flex">
-            <span class="star text-lg">★★★★★</span>
-          </div>
-          <span class="text-white font-bold">100% Recommended</span>
-          <span class="text-gray-400">· 52+ happy passengers</span>
-        </div>
+        <blockquote class="border-l-2 border-taxi/50 pl-4 my-5">
+          <p class="text-white/70 text-sm italic">"Driver sent confirmation messages the night before, and was on time. Best taxi service in Kent."</p>
+          <cite class="text-taxi/70 text-xs mt-1 block">Pedro Kutova · Google</cite>
+        </blockquote>
 
-        <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-3">
           <a href="tel:07938971002"
-             class="flex items-center justify-center gap-3 bg-taxi text-black font-black text-xl px-8 py-5 rounded-2xl hover:bg-taxi-dark transition-all hover:scale-105 shadow-lg shadow-yellow-500/20">
-            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+             class="bg-taxi text-black font-black text-xl px-8 py-5 rounded-2xl hover:bg-taxi-dim transition-all hover:scale-105 flex items-center justify-center gap-3 shadow-2xl shadow-yellow-400/20">
+            <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
             </svg>
             Call Now
           </a>
-          <a href="https://wa.me/447938971002?text=Hi%2C%20I%27d%20like%20to%20book%20a%20taxi%20please"
-             target="_blank"
-             class="whatsapp-btn flex items-center justify-center gap-3 text-white font-black text-xl px-8 py-5 rounded-2xl transition-all hover:scale-105 shadow-lg">
-            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          <a href="https://wa.me/447938971002?text=Hi%2C%20I%27d%20like%20a%20quote%20please"
+             target="_blank" rel="noopener"
+             class="whatsapp text-white font-black text-xl px-8 py-5 rounded-2xl transition-all hover:scale-105 flex items-center justify-center gap-3 shadow-2xl">
+            <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
-            WhatsApp Us
+            WhatsApp
           </a>
         </div>
-
-        <p class="text-gray-500 text-sm mt-4">No app needed · Fixed prices quoted upfront · Available 7 days</p>
+        <p class="text-white/30 text-xs mt-3">No app. No signup. Quote in minutes.</p>
       </div>
     </div>
   </section>
 
-  <!-- YELLOW DIVIDER -->
-  <div class="h-2 stripe"></div>
+  <!-- CHECKER RULE -->
+  <div class="checker h-5"></div>
 
-  <!-- WHY CHOOSE US -->
-  <section class="bg-card py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-card-2 rounded-2xl p-6 border border-taxi/20 text-center">
-          <div class="text-4xl mb-3">📍</div>
-          <h3 class="text-taxi font-bold text-lg mb-1">Locally Based</h3>
-          <p class="text-gray-400 text-sm">Born and based in Sevenoaks. We know every road, shortcut and school run.</p>
-        </div>
-        <div class="bg-card-2 rounded-2xl p-6 border border-taxi/20 text-center">
-          <div class="text-4xl mb-3">💷</div>
-          <h3 class="text-taxi font-bold text-lg mb-1">Fixed Prices</h3>
-          <p class="text-gray-400 text-sm">No meter surprises. Get your quote upfront — by call, text or WhatsApp.</p>
-        </div>
-        <div class="bg-card-2 rounded-2xl p-6 border border-taxi/20 text-center">
-          <div class="text-4xl mb-3">⭐</div>
-          <h3 class="text-taxi font-bold text-lg mb-1">100% Recommended</h3>
-          <p class="text-gray-400 text-sm">52+ five-star reviews and counting. Trusted by Sevenoaks families since 2023.</p>
-        </div>
+  <!-- PROOF BAR -->
+  <section class="bg-panel py-10 px-4">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-4xl font-black text-taxi">5.0</div>
+        <div class="text-white/50 text-xs mt-1">Google rating</div>
       </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="py-20 px-4 bg-dark">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-taxi font-semibold text-sm uppercase tracking-widest">What We Do</span>
-        <h2 class="text-4xl md:text-5xl font-black mt-2">Our Services</h2>
+      <div>
+        <div class="text-4xl font-black text-taxi">153</div>
+        <div class="text-white/50 text-xs mt-1">five-star reviews</div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">✈️</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Airport Transfers</h3>
-          <p class="text-gray-400 text-sm">Gatwick, Heathrow, Stansted, London City — door to terminal with no stress.</p>
-        </div>
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">🚂</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Station Transfers</h3>
-          <p class="text-gray-400 text-sm">Sevenoaks station pick-ups and drop-offs. No more rushing for trains.</p>
-        </div>
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">🏙️</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">London Trips</h3>
-          <p class="text-gray-400 text-sm">Sevenoaks to Central London and back. Fixed rate, comfortable journey.</p>
-        </div>
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">🗺️</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Long Distance</h3>
-          <p class="text-gray-400 text-sm">Anywhere in the UK. Get a fixed price quote before you travel.</p>
-        </div>
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">🎉</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Events & Nights Out</h3>
-          <p class="text-gray-400 text-sm">Get there and back safely. Prebook for weddings, concerts and evenings out.</p>
-        </div>
-
-        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/30 transition-colors group">
-          <div class="w-12 h-12 bg-taxi/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi/20 transition-colors">
-            <span class="text-2xl">🏠</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Local Journeys</h3>
-          <p class="text-gray-400 text-sm">Short hops around Sevenoaks and nearby villages. Reliable, every time.</p>
-        </div>
-
+      <div>
+        <div class="text-4xl font-black text-taxi">Fixed</div>
+        <div class="text-white/50 text-xs mt-1">prices, no meters</div>
+      </div>
+      <div>
+        <div class="text-4xl font-black text-taxi">12+</div>
+        <div class="text-white/50 text-xs mt-1">vehicles in the fleet</div>
       </div>
     </div>
   </section>
 
   <!-- FLEET -->
-  <section id="fleet" class="py-20 px-4 bg-card">
+  <section id="fleet" class="py-20 px-4 bg-ink">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-taxi font-semibold text-sm uppercase tracking-widest">Travel in Comfort</span>
-        <h2 class="text-4xl md:text-5xl font-black mt-2">Our Fleet</h2>
-        <p class="text-gray-400 mt-3 max-w-xl mx-auto">Clean, well-maintained vehicles. Comfortable seats and plenty of space for luggage.</p>
+      <div class="mb-8">
+        <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
+        <h2 class="text-4xl md:text-5xl font-black">The fleet.</h2>
+        <p class="text-white/55 mt-2 text-lg">Saloons. Estates. Seven-seaters. A London Black Cab. And yes, a vintage Beauford.</p>
       </div>
-      <!-- Photo grid: real photos go here once Google Places API is enabled -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="aspect-video bg-card-2 rounded-2xl border border-white/10 flex flex-col items-center justify-center overflow-hidden relative">
-          <div class="absolute inset-0 bg-gradient-to-br from-taxi/5 to-transparent"></div>
-          <span class="text-6xl mb-3">🚕</span>
-          <span class="text-taxi font-bold text-lg">Saloon Cars</span>
-          <span class="text-gray-400 text-sm mt-1">Up to 4 passengers</span>
+
+      <!-- Real fleet photo — branded collage -->
+      <div class="rounded-2xl overflow-hidden border border-white/5">
+        <img src="images/fleet-collage.webp"
+             alt="TN14 Cars fleet — saloons, estates, MPVs, minibus, wheelchair accessible and specialist vehicles"
+             class="w-full object-cover" />
+      </div>
+
+      <!-- Vehicle type grid -->
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-4">
+        <div class="bg-card rounded-xl p-3 text-center border border-white/5">
+          <div class="text-xl mb-1">🚗</div>
+          <div class="text-white text-xs font-bold">Saloon</div>
+          <div class="text-white/35 text-xs">1–4</div>
         </div>
-        <div class="aspect-video bg-card-2 rounded-2xl border border-white/10 flex flex-col items-center justify-center overflow-hidden relative">
-          <div class="absolute inset-0 bg-gradient-to-br from-taxi/5 to-transparent"></div>
-          <span class="text-6xl mb-3">🚐</span>
-          <span class="text-taxi font-bold text-lg">Estate & MPV</span>
-          <span class="text-gray-400 text-sm mt-1">Extra luggage space</span>
+        <div class="bg-card rounded-xl p-3 text-center border border-white/5">
+          <div class="text-xl mb-1">🚙</div>
+          <div class="text-white text-xs font-bold">Estate</div>
+          <div class="text-white/35 text-xs">luggage</div>
+        </div>
+        <div class="bg-card rounded-xl p-3 text-center border border-white/5">
+          <div class="text-xl mb-1">🚐</div>
+          <div class="text-white text-xs font-bold">MPV</div>
+          <div class="text-white/35 text-xs">1–7</div>
+        </div>
+        <div class="bg-card rounded-xl p-3 text-center border border-white/5">
+          <div class="text-xl mb-1">🚌</div>
+          <div class="text-white text-xs font-bold">Minibus</div>
+          <div class="text-white/35 text-xs">groups</div>
+        </div>
+        <div class="bg-taxi/10 rounded-xl p-3 text-center border border-taxi/20">
+          <div class="text-xl mb-1">🏛️</div>
+          <div class="text-taxi text-xs font-bold">Black Cab</div>
+          <div class="text-white/35 text-xs">iconic</div>
+        </div>
+        <div class="bg-taxi/10 rounded-xl p-3 text-center border border-taxi/20">
+          <div class="text-xl mb-1">♿</div>
+          <div class="text-taxi text-xs font-bold">Wheelchair</div>
+          <div class="text-white/35 text-xs">accessible</div>
         </div>
       </div>
-      <p class="text-center text-gray-600 text-xs mt-4">Fleet photos coming soon · All vehicles are fully licensed and insured</p>
+
+      <!-- Vintage car callout -->
+      <div class="mt-4 bg-[#1a1500] border border-taxi/20 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="text-4xl flex-shrink-0">🎩</div>
+        <div>
+          <div class="text-taxi font-bold text-base">Vintage Beauford available</div>
+          <div class="text-white/55 text-sm mt-0.5">Weddings, proms, special occasions. A white Beauford with red hood — not exactly what Uber offers. WhatsApp to check availability.</div>
+        </div>
+        <a href="https://wa.me/447938971002?text=Hi%2C%20I%27m%20interested%20in%20the%20vintage%20Beauford%20for%20a%20special%20occasion"
+           target="_blank" rel="noopener"
+           class="ml-auto text-taxi font-bold text-sm whitespace-nowrap hover:text-yellow-300 transition-colors flex-shrink-0">
+          Ask →
+        </a>
+      </div>
+
+      <!-- Vehicle grid photo -->
+      <div class="rounded-2xl overflow-hidden border border-white/5 mt-4">
+        <img src="images/fleet-vehicles.webp"
+             alt="TN14 Cars individual vehicles — including London Black Cab and vintage wedding car"
+             class="w-full object-cover" />
+      </div>
     </div>
   </section>
 
-  <!-- AREAS WE COVER -->
-  <section id="areas" class="py-20 px-4 bg-dark">
+  <!-- SERVICES -->
+  <section id="services" class="py-20 px-4 bg-panel">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-taxi font-semibold text-sm uppercase tracking-widest">Coverage</span>
-        <h2 class="text-4xl md:text-5xl font-black mt-2">Areas We Cover</h2>
-        <p class="text-gray-400 mt-3">Based in Sevenoaks — serving the whole TN13/TN14 corridor and beyond.</p>
+      <div class="mb-10">
+        <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
+        <h2 class="text-4xl md:text-5xl font-black">What they call for.</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <!-- Local coverage -->
-        <div>
-          <h3 class="text-taxi font-bold text-lg mb-4 flex items-center gap-2">
-            <span>📍</span> Local Villages & Towns
-          </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+          <div class="text-3xl mb-3">✈️</div>
+          <h3 class="font-bold text-lg mb-2">Airport transfers</h3>
+          <p class="text-white/55 text-sm mb-4">Gatwick, Heathrow, Stansted, City, Luton. Fixed price quoted upfront. Driver tracks your flight on the return.</p>
           <div class="grid grid-cols-2 gap-2">
-            {["Sevenoaks", "Otford", "Kemsing", "Dunton Green", "Halstead", "Knockholt", "Shoreham", "Chipstead", "Westerham", "Eynsford", "Swanley", "Borough Green"].map(area => `
-            <div class="flex items-center gap-2 bg-card rounded-lg px-3 py-2 text-sm">
-              <span class="text-taxi text-xs">●</span>
-              <span class="text-gray-200">${area}</span>
-            </div>`).join('')}
+            <div class="bg-ink rounded-lg px-3 py-2 text-xs flex justify-between items-center">
+              <span class="text-white/45">Gatwick</span>
+              <span class="text-taxi font-bold">~30 min</span>
+            </div>
+            <div class="bg-ink rounded-lg px-3 py-2 text-xs flex justify-between items-center">
+              <span class="text-white/45">Heathrow</span>
+              <span class="text-taxi font-bold">~45 min</span>
+            </div>
+            <div class="bg-ink rounded-lg px-3 py-2 text-xs flex justify-between items-center">
+              <span class="text-white/45">London City</span>
+              <span class="text-taxi font-bold">~50 min</span>
+            </div>
+            <div class="bg-ink rounded-lg px-3 py-2 text-xs flex justify-between items-center">
+              <span class="text-white/45">Stansted</span>
+              <span class="text-taxi font-bold">~70 min</span>
+            </div>
           </div>
         </div>
 
-        <!-- Airports -->
-        <div>
-          <h3 class="text-taxi font-bold text-lg mb-4 flex items-center gap-2">
-            <span>✈️</span> Airport Transfers
-          </h3>
-          <div class="space-y-3">
-            <div class="flex items-center justify-between bg-card rounded-xl px-4 py-3">
-              <span class="font-medium">Gatwick Airport</span>
-              <span class="text-taxi text-sm font-bold">~30 min</span>
-            </div>
-            <div class="flex items-center justify-between bg-card rounded-xl px-4 py-3">
-              <span class="font-medium">Heathrow Airport</span>
-              <span class="text-taxi text-sm font-bold">~45 min</span>
-            </div>
-            <div class="flex items-center justify-between bg-card rounded-xl px-4 py-3">
-              <span class="font-medium">London City Airport</span>
-              <span class="text-taxi text-sm font-bold">~50 min</span>
-            </div>
-            <div class="flex items-center justify-between bg-card rounded-xl px-4 py-3">
-              <span class="font-medium">Stansted Airport</span>
-              <span class="text-taxi text-sm font-bold">~70 min</span>
-            </div>
-            <div class="flex items-center justify-between bg-card rounded-xl px-4 py-3">
-              <span class="font-medium">Luton Airport</span>
-              <span class="text-taxi text-sm font-bold">~75 min</span>
-            </div>
-          </div>
-          <p class="text-gray-600 text-xs mt-3">Times are approximate. Fixed price quoted before you travel.</p>
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+          <div class="text-3xl mb-3">🗺️</div>
+          <h3 class="font-bold text-lg mb-2">Long distance</h3>
+          <p class="text-white/55 text-sm mb-3">Southampton docks. London shows. Anywhere in the UK. Fixed price before you travel.</p>
+          <blockquote class="border-l-2 border-taxi/30 pl-3">
+            <p class="text-white/50 text-xs italic">"Was there as we stepped off the ship. Highly recommend TN14 Cars."</p>
+            <cite class="text-taxi/55 text-xs mt-1 block">Henry Rodgers · Google</cite>
+          </blockquote>
+        </div>
+
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+          <div class="text-3xl mb-3">🌙</div>
+          <h3 class="font-bold text-lg mb-2">4am pickups</h3>
+          <p class="text-white/55 text-sm mb-3">Early flights. Late nights back from London. The car arrives quietly.</p>
+          <blockquote class="border-l-2 border-taxi/30 pl-3">
+            <p class="text-white/50 text-xs italic">"Even for my super early 4:00 am pickups. Arrives on time, keeps things quiet so the neighbors aren't disturbed, and plays relaxing music."</p>
+            <cite class="text-taxi/55 text-xs mt-1 block">Sal Tunio · Google</cite>
+          </blockquote>
+        </div>
+
+        <div class="bg-card rounded-2xl p-6 border border-white/5 hover:border-taxi/25 transition-colors">
+          <div class="text-3xl mb-3">📍</div>
+          <h3 class="font-bold text-lg mb-2">Local runs</h3>
+          <p class="text-white/55 text-sm mb-3">Station. Hospital. School run. Short hops around Sevenoaks and the villages.</p>
+          <blockquote class="border-l-2 border-taxi/30 pl-3">
+            <p class="text-white/50 text-xs italic">"Ray dropped me off at hospital this morning. The whole experience from booking to payment was really straightforward."</p>
+            <cite class="text-taxi/55 text-xs mt-1 block">K Mortimer · Google</cite>
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section id="areas" class="py-20 px-4 bg-ink">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-8">
+        <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
+        <h2 class="text-4xl md:text-5xl font-black">Where we go.</h2>
+        <p class="text-white/55 mt-2">Based in Sevenoaks. The TN13 and TN14 corridor. Anywhere beyond — just ask.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Sevenoaks
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Otford
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Kemsing
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Dunton Green
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Halstead
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Knockholt
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Shoreham
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Chipstead
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Westerham
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Eynsford
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Swanley
+        </div>
+        <div class="bg-card rounded-lg px-3 py-2.5 text-sm flex items-center gap-2">
+          <span class="text-taxi text-xs">●</span>Borough Green
         </div>
       </div>
+      <p class="text-white/30 text-xs mt-4">Long distance? Anywhere in the UK. WhatsApp for a quote.</p>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section id="reviews" class="py-20 px-4 bg-card">
+  <section id="reviews" class="py-20 px-4 bg-panel">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-taxi font-semibold text-sm uppercase tracking-widest">What People Say</span>
-        <h2 class="text-4xl md:text-5xl font-black mt-2">Customer Reviews</h2>
-        <!-- Aggregate rating -->
-        <div class="inline-flex items-center gap-3 bg-card-2 rounded-2xl px-6 py-3 mt-6 border border-taxi/20">
-          <span class="star text-3xl font-black">★★★★★</span>
-          <div class="text-left">
-            <div class="font-black text-2xl text-white">100%</div>
-            <div class="text-gray-400 text-sm">Recommended · 52+ reviews</div>
-          </div>
+      <div class="mb-10">
+        <div class="checker h-1 w-10 rounded mb-3 opacity-60"></div>
+        <h2 class="text-4xl md:text-5xl font-black">153 people said.</h2>
+        <div class="flex items-center gap-3 mt-4">
+          <span class="text-taxi font-black text-4xl">5.0</span>
+          <span class="text-taxi text-xl">★★★★★</span>
+          <span class="text-white/35 text-sm">Google · 153 reviews</span>
         </div>
       </div>
 
-      <!-- Review cards — replace with real Google reviews when Places API is enabled -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <div class="bg-card-2 rounded-2xl p-5 border border-white/5">
-          <div class="star text-base mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Always on time, clean car and a very friendly driver. My go-to taxi for Sevenoaks station every morning."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-taxi/20 rounded-full flex items-center justify-center text-taxi font-bold text-sm">S</div>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Rafael was friendly, helpful, polite and was there 10 mins early. Provided us with water, mints etc. Gold star service from TN14 cars as usual."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">C</div>
             <div>
-              <div class="font-semibold text-sm">Sarah M.</div>
-              <div class="text-gray-500 text-xs">Sevenoaks</div>
+              <div class="text-sm font-semibold">Cassie Chandler</div>
+              <div class="text-white/35 text-xs">3 months ago</div>
             </div>
           </div>
         </div>
 
-        <div class="bg-card-2 rounded-2xl p-5 border border-white/5">
-          <div class="star text-base mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Used TN14 Cars for a Gatwick run at 4am. Driver was punctual, professional and I made my flight with no stress whatsoever."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-taxi/20 rounded-full flex items-center justify-center text-taxi font-bold text-sm">J</div>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Always reliable and respectful, even for my super early 4:00 am pickups. Arrives on time, keeps things quiet so the neighbors aren't disturbed, and plays relaxing music."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">S</div>
             <div>
-              <div class="font-semibold text-sm">James T.</div>
-              <div class="text-gray-500 text-xs">Dunton Green</div>
+              <div class="text-sm font-semibold">Sal Tunio</div>
+              <div class="text-white/35 text-xs">a year ago</div>
             </div>
           </div>
         </div>
 
-        <div class="bg-card-2 rounded-2xl p-5 border border-white/5">
-          <div class="star text-base mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Brilliant local taxi. Messaged on WhatsApp and had a price within minutes. Much better than any app — real person, real service."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-taxi/20 rounded-full flex items-center justify-center text-taxi font-bold text-sm">R</div>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Best taxi service in Kent! Driver sent confirmation messages the night before, and was on time. Just had Eduardo pick me up at Heathrow."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">P</div>
             <div>
-              <div class="font-semibold text-sm">Rachel K.</div>
-              <div class="text-gray-500 text-xs">Otford</div>
+              <div class="text-sm font-semibold">Pedro Kutova</div>
+              <div class="text-white/35 text-xs">8 months ago</div>
             </div>
           </div>
         </div>
 
-        <div class="bg-card-2 rounded-2xl p-5 border border-white/5">
-          <div class="star text-base mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Fixed price to Heathrow, no nonsense. Car was spotless and driver very courteous. Will always use TN14 Cars for airport trips."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-taxi/20 rounded-full flex items-center justify-center text-taxi font-bold text-sm">M</div>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"I changed our departure time the night before by half an hour. I just sent a WhatsApp message and it was all confirmed within 5 mins of the change."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">K</div>
             <div>
-              <div class="font-semibold text-sm">Mark W.</div>
-              <div class="text-gray-500 text-xs">Sevenoaks</div>
+              <div class="text-sm font-semibold">Kyle Shadbolt</div>
+              <div class="text-white/35 text-xs">a year ago</div>
             </div>
           </div>
         </div>
 
-        <div class="bg-card-2 rounded-2xl p-5 border border-white/5">
-          <div class="star text-base mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Recommended by a neighbour and I can see why. Friendly, reliable and great value for local trips. Exactly what Sevenoaks needs."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-taxi/20 rounded-full flex items-center justify-center text-taxi font-bold text-sm">L</div>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Today I had to do something really emotional and Jack did everything he could to make it easier for me. So friendly and kind, even the staff over the phone."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">E</div>
             <div>
-              <div class="font-semibold text-sm">Louise B.</div>
-              <div class="text-gray-500 text-xs">Chipstead</div>
+              <div class="text-sm font-semibold">Ella Gordon-Kind</div>
+              <div class="text-white/35 text-xs">a year ago</div>
             </div>
           </div>
         </div>
 
-        <!-- CTA card -->
-        <div class="bg-taxi rounded-2xl p-5 flex flex-col items-center justify-center text-center">
-          <div class="text-black text-4xl mb-3">💬</div>
-          <h3 class="text-black font-black text-lg mb-2">Had a great ride?</h3>
-          <p class="text-black/70 text-sm mb-4">Leave a review on Google and help other locals find us.</p>
-          <a href="https://wa.me/447938971002" target="_blank"
-             class="bg-black text-taxi font-bold px-4 py-2 rounded-full text-sm hover:bg-gray-900 transition-colors">
-            Leave Feedback →
-          </a>
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"TN14 cars are the best taxi service I have ever used. Always early or on time, even at very late or very early times of the day. They take a lot of the stress out of travelling."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">S</div>
+            <div>
+              <div class="text-sm font-semibold">Serena Watts</div>
+              <div class="text-white/35 text-xs">10 months ago</div>
+            </div>
+          </div>
         </div>
 
       </div>
-      <p class="text-center text-gray-700 text-xs mt-6">* Reviews sourced from Facebook. Google reviews will be displayed here once connected.</p>
+
+      <!-- Second row of reviews -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Always an excellent service — from booking to being dropped off. Always early or on time. Really friendly drivers. 100% reliable. Couldn't recommend them more highly."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">F</div>
+            <div>
+              <div class="text-sm font-semibold">Fionna Turner</div>
+              <div class="text-white/35 text-xs">4 months ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-card rounded-2xl p-5 border border-white/5">
+          <div class="text-taxi text-sm mb-3">★★★★★</div>
+          <p class="text-white/80 text-sm leading-relaxed">"Having used this company for a few years now for our trips to Gatwick and back, we found them great from booking to pickup and return. Used them recently for a long distance wedding drop off — again amazing."</p>
+          <div class="mt-4 flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-taxi/15 flex items-center justify-center text-taxi text-xs font-black">H</div>
+            <div>
+              <div class="text-sm font-semibold">Hayley Bentley</div>
+              <div class="text-white/35 text-xs">6 months ago</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center mt-6 text-white/30 text-sm">153 reviews · all five stars · on Google</p>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-20 px-4 bg-dark">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-taxi font-semibold text-sm uppercase tracking-widest">Get In Touch</span>
-        <h2 class="text-4xl md:text-5xl font-black mt-2">Book Your Taxi</h2>
-        <p class="text-gray-400 mt-3">Call, text or WhatsApp — we'll give you a fixed price quote in minutes.</p>
-      </div>
+  <section id="contact" class="py-20 px-4 bg-ink">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="checker h-1 w-10 rounded mb-3 opacity-60 mx-auto"></div>
+      <h2 class="text-4xl md:text-5xl font-black mb-3">Get a quote.</h2>
+      <p class="text-white/55 mb-10">Call, text or WhatsApp. Fixed price back in minutes.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <a href="tel:07938971002"
-           class="bg-taxi rounded-2xl p-6 flex items-center gap-4 hover:bg-taxi-dark transition-colors group">
-          <div class="w-14 h-14 bg-black/20 rounded-xl flex items-center justify-center flex-shrink-0">
+           class="bg-taxi rounded-2xl p-6 flex items-center gap-4 hover:bg-taxi-dim transition-colors">
+          <div class="w-14 h-14 bg-black/15 rounded-xl flex items-center justify-center flex-shrink-0">
             <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
             </svg>
           </div>
-          <div>
+          <div class="text-left">
             <div class="text-black font-black text-2xl">07938 971002</div>
-            <div class="text-black/70 font-medium">Tap to call</div>
+            <div class="text-black/55 text-sm">Tap to call</div>
           </div>
         </a>
 
-        <a href="https://wa.me/447938971002?text=Hi%2C%20I%27d%20like%20to%20book%20a%20taxi%20please"
-           target="_blank"
-           class="whatsapp-btn rounded-2xl p-6 flex items-center gap-4 hover:opacity-90 transition-opacity group">
-          <div class="w-14 h-14 bg-black/20 rounded-xl flex items-center justify-center flex-shrink-0">
+        <a href="https://wa.me/447938971002?text=Hi%2C%20I%27d%20like%20a%20quote%20please"
+           target="_blank" rel="noopener"
+           class="whatsapp rounded-2xl p-6 flex items-center gap-4 hover:opacity-90 transition-opacity">
+          <div class="w-14 h-14 bg-black/15 rounded-xl flex items-center justify-center flex-shrink-0">
             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
           </div>
-          <div>
+          <div class="text-left">
             <div class="text-white font-black text-2xl">WhatsApp</div>
-            <div class="text-white/80 font-medium">Message us now</div>
+            <div class="text-white/65 text-sm">Message us now</div>
           </div>
         </a>
       </div>
 
-      <!-- Address + hours -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="bg-card rounded-2xl p-6 border border-white/5">
-          <div class="flex items-start gap-3">
-            <span class="text-taxi text-xl">📍</span>
-            <div>
-              <h3 class="font-bold mb-1">Our Base</h3>
-              <p class="text-gray-400 text-sm">18 Chatham Hill Road<br/>Sevenoaks, Kent<br/>TN14 5AP</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-card rounded-2xl p-6 border border-white/5">
-          <div class="flex items-start gap-3">
-            <span class="text-taxi text-xl">🕐</span>
-            <div>
-              <h3 class="font-bold mb-1">Availability</h3>
-              <p class="text-gray-400 text-sm">7 days a week<br/>Early mornings to late evenings<br/>Prebooking recommended</p>
-            </div>
-          </div>
-        </div>
+      <div class="bg-panel rounded-2xl p-5 border border-white/5 text-white/40 text-sm flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
+        <span>18 Chatham Hill Road, Sevenoaks TN14 5AP</span>
+        <span class="hidden sm:block text-white/15">·</span>
+        <span>7 days a week</span>
+        <span class="hidden sm:block text-white/15">·</span>
+        <span>Early mornings to late nights</span>
       </div>
     </div>
   </section>
 
   <!-- BOTTOM CTA STRIP -->
-  <div class="bg-taxi py-8 px-4">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+  <div class="checker h-5"></div>
+  <div class="bg-taxi py-7 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        <div class="text-black font-black text-xl">Ready to book?</div>
-        <div class="text-black/70 text-sm">Get your fixed price quote now — no obligation.</div>
+        <div class="text-black font-black text-xl">Sevenoaks. TN14. Any time.</div>
+        <div class="text-black/55 text-sm">Fixed price. Named driver. Five stars, 153 times.</div>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 flex-shrink-0">
         <a href="tel:07938971002"
-           class="bg-black text-taxi font-bold px-6 py-3 rounded-full hover:bg-gray-900 transition-colors text-sm whitespace-nowrap">
-          📞 07938 971002
+           class="bg-black text-taxi font-black px-5 py-3 rounded-full text-sm hover:bg-gray-900 transition-colors whitespace-nowrap">
+          Call 07938 971002
         </a>
-        <a href="https://wa.me/447938971002" target="_blank"
-           class="bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors text-sm whitespace-nowrap">
-          💬 WhatsApp
+        <a href="https://wa.me/447938971002" target="_blank" rel="noopener"
+           class="bg-white text-black font-bold px-5 py-3 rounded-full text-sm hover:bg-gray-100 transition-colors">
+          WhatsApp
         </a>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-black py-8 px-4 border-t border-white/5">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-sm">
+  <footer class="bg-ink border-t border-white/5 py-7 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white/25 text-xs">
       <div class="flex items-center gap-2">
-        <span>🚕</span>
-        <span><strong class="text-taxi">TN14</strong> CARS LIMITED</span>
-        <span>· Sevenoaks, Kent</span>
+        <div class="checker w-4 h-4 rounded-sm opacity-50 flex-shrink-0"></div>
+        <span class="text-white/40 font-bold">TN14CARS LIMITED</span>
+        <span>· Sevenoaks, Kent · No. 14566342</span>
       </div>
-      <div class="flex gap-6">
-        <a href="#services" class="hover:text-gray-400 transition-colors">Services</a>
-        <a href="#areas" class="hover:text-gray-400 transition-colors">Areas</a>
-        <a href="#reviews" class="hover:text-gray-400 transition-colors">Reviews</a>
-        <a href="#contact" class="hover:text-gray-400 transition-colors">Contact</a>
+      <div class="flex gap-5">
+        <a href="#fleet" class="hover:text-white/50 transition-colors">Fleet</a>
+        <a href="#services" class="hover:text-white/50 transition-colors">Services</a>
+        <a href="#areas" class="hover:text-white/50 transition-colors">Areas</a>
+        <a href="#reviews" class="hover:text-white/50 transition-colors">Reviews</a>
+        <a href="#contact" class="hover:text-white/50 transition-colors">Contact</a>
       </div>
-      <div>© 2024 TN14CARS LIMITED · Company No. 14566342</div>
+      <div>© 2025 TN14CARS LIMITED</div>
     </div>
   </footer>
 
