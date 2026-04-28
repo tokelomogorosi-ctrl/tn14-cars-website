@@ -625,6 +625,8 @@
   function renderReviewBatch() {
     const reviewsSection = document.getElementById('reviews');
     if (!reviewsSection) return;
+    const container = reviewsSection.querySelector('.max-w-6xl');
+    if (!container) return;
     const now = Date.now();
     const storedTs  = localStorage.getItem('tn14_batch_ts');
     const storedIdx = localStorage.getItem('tn14_batch_idx');
@@ -642,7 +644,7 @@
       localStorage.setItem('tn14_batch_idx', '0');
     }
     const batchReviews = allReviews.slice(currentBatch * 6, currentBatch * 6 + 6);
-    reviewsSection.querySelectorAll('.grid').forEach(g => g.remove());
+    container.querySelectorAll('.grid').forEach(g => g.remove());
     const grid = document.createElement('div');
     grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
     batchReviews.forEach(r => {
@@ -660,8 +662,8 @@
         </div>`;
       grid.appendChild(card);
     });
-    const footer = reviewsSection.querySelector('p:last-child');
-    reviewsSection.insertBefore(grid, footer);
+    const footer = container.querySelector('p:last-child');
+    container.insertBefore(grid, footer);
   }
 
   document.addEventListener('DOMContentLoaded', renderReviewBatch);
