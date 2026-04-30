@@ -140,7 +140,7 @@
         <div class="text-white/50 text-xs mt-1">prices, no meters</div>
       </div>
       <div>
-        <div class="text-4xl font-black text-taxi">12+</div>
+        <div class="text-4xl font-black text-taxi">70+</div>
         <div class="text-white/50 text-xs mt-1">vehicles in the fleet</div>
       </div>
     </div>
@@ -567,7 +567,7 @@
         <a href="#reviews" class="hover:text-white/50 transition-colors">Reviews</a>
         <a href="#contact" class="hover:text-white/50 transition-colors">Contact</a>
       </div>
-      <div>© 2025 TN14CARS LIMITED</div>
+      <div>© 2023 TN14CARS LIMITED</div>
     </div>
   </footer>
 
@@ -586,40 +586,58 @@
   </script>
 
   <script>
-  /* ── BUILD 1: Review cycling with localStorage batch rotation ── */
+  /* ── BUILD 1: Review cycling — per-visit random batch ── */
   const allReviews = [
-    { name: "Cassie Chandler",  initial: "C", date: "3 months ago",  text: "Rafael was friendly, helpful, polite and was there 10 mins early. Provided us with water, mints etc. Gold star service from TN14 cars as usual." },
-    { name: "Sal Tunio",        initial: "S", date: "a year ago",     text: "Always reliable and respectful, even for my super early 4:00 am pickups. Arrives on time, keeps things quiet so the neighbors aren't disturbed, and plays relaxing music." },
-    { name: "Pedro Kutova",     initial: "P", date: "8 months ago",   text: "Best taxi service in Kent! Driver sent confirmation messages the night before, and was on time. Just had Eduardo pick me up at Heathrow." },
-    { name: "Kyle Shadbolt",    initial: "K", date: "a year ago",     text: "I changed our departure time the night before by half an hour. I just sent a WhatsApp message and it was all confirmed within 5 mins of the change." },
-    { name: "Ella Gordon-Kind", initial: "E", date: "a year ago",     text: "Today I had to do something really emotional and Jack did everything he could to make it easier for me. So friendly and kind, even the staff over the phone." },
-    { name: "Serena Watts",     initial: "S", date: "10 months ago",  text: "TN14 cars are the best taxi service I have ever used. Always early or on time, even at very late or very early times of the day. They take a lot of the stress out of travelling." },
-    { name: "Fionna Turner",    initial: "F", date: "4 months ago",   text: "Always an excellent service — from booking to being dropped off. Always early or on time. Really friendly drivers. 100% reliable. Couldn't recommend them more highly." },
-    { name: "Hayley Bentley",   initial: "H", date: "6 months ago",   text: "Having used this company for a few years now for our trips to Gatwick and back, we found them great from booking to pickup and return. Used them recently for a long distance wedding drop off — again amazing." },
-    { name: "James R",          initial: "J", date: "2 months ago",   text: "Absolutely brilliant. Driver arrived 10 minutes early, car was immaculate, and the service was second to none. Will definitely be using TN14 Cars again." },
-    { name: "Sarah M",          initial: "S", date: "5 months ago",   text: "Booked for a 5am airport run and the driver was there before I even got outside. Polite, professional, clean car. Exactly what you want at that hour." },
-    { name: "David K",          initial: "D", date: "7 months ago",   text: "Used TN14 for a wedding transfer. The vintage car was stunning and the driver was incredibly professional. Every guest was impressed." },
-    { name: "Emma T",           initial: "E", date: "9 months ago",   text: "Reliable, punctual and very reasonably priced. Have used them for airport runs to Heathrow and Gatwick several times. Never had a single issue." },
-    { name: "Mark W",           initial: "M", date: "11 months ago",  text: "Needed a wheelchair accessible vehicle at short notice. TN14 sorted it without any fuss. Professional, caring and efficient." },
-    { name: "Lucy H",           initial: "L", date: "a year ago",     text: "Impeccable service every single time. The drivers know the area well, cars are clean, and communication before your journey is reassuring." },
-    { name: "Tom B",            initial: "T", date: "2 years ago",    text: "Used for a corporate trip to London. Smart car, smart driver, arrived ahead of schedule. The kind of service that makes you look good." },
-    { name: "Claire N",         initial: "C", date: "18 months ago",  text: "Booked a Black Cab experience through TN14 for my husband's birthday — he absolutely loved it. The driver was great and the car was spotless." },
-    { name: "Andrew S",         initial: "A", date: "a year ago",     text: "Five stars without hesitation. Always on time, always polite, always a clean and comfortable car. I wouldn't use anyone else in Sevenoaks." },
-    { name: "Natalie P",        initial: "N", date: "8 months ago",   text: "So grateful for TN14 when our original transfer fell through. They came through on two hours' notice for a Heathrow run. Saved the holiday." },
-    { name: "Robert G",         initial: "R", date: "6 months ago",   text: "My go-to taxi company for everything from school runs to Gatwick. Consistent quality — you always know what you're getting." },
-    { name: "Helen C",          initial: "H", date: "3 months ago",   text: "Used the London Black Cab for a party pickup. It was the highlight of the evening — the driver even knew some of the party tricks to make it special." },
-    { name: "Stephen V",        initial: "S", date: "2 months ago",   text: "I've tried a few taxi companies in the area over the years. TN14 is the only one I trust for early morning Gatwick runs. Consistently excellent." },
-    { name: "Jane F",           initial: "J", date: "4 months ago",   text: "Friendly, reliable and great value. Driver arrived early, helped with luggage and made the whole airport experience much less stressful." },
-    { name: "Mike D",           initial: "M", date: "5 months ago",   text: "Our company uses TN14 for executive transfers. Clients always comment on the quality of the service. Highly recommend for corporate use." },
-    { name: "Olivia S",         initial: "O", date: "7 months ago",   text: "Booked a late-night pickup after a concert. Driver was there exactly on time, calm and friendly. Felt completely safe. Thank you TN14." },
-    { name: "Paul T",           initial: "P", date: "9 months ago",   text: "Third year using TN14 for our annual holiday airport transfer. Zero reasons to change — always faultless." },
-    { name: "Rachel A",         initial: "R", date: "10 months ago",  text: "The communication is what sets TN14 apart. You always get a message confirming your booking, then another reminder the night before. No surprises." },
-    { name: "Chris B",          initial: "C", date: "a year ago",     text: "Extremely professional. The car was spotless, the driver was early and the price was exactly as quoted. No hidden charges, no fuss." },
-    { name: "Susan M",          initial: "S", date: "a year ago",     text: "Our family has used TN14 for years. Christmas Day airport runs, school trips, hospital visits — always there, always reliable." },
-    { name: "Ian W",            initial: "I", date: "18 months ago",  text: "Genuinely the best cab company I've used in the UK. The attention to detail — the confirmation texts, the clean cars, the professional drivers — it all adds up." },
-    { name: "Karen L",          initial: "K", date: "2 years ago",    text: "When my mother was discharged from hospital, TN14 arranged a wheelchair-accessible vehicle within hours. Couldn't have been more helpful." },
-    { name: "Daniel P",         initial: "D", date: "2 years ago",    text: "The vintage Beauford was perfect for our wedding. We had so many compliments on the day. The driver was part of the occasion." },
-    { name: "Victoria H",       initial: "V", date: "2 years ago",    text: "Reliable, affordable, and genuinely kind drivers. TN14 feels like a local business that actually cares about the community." }
+    { name: "Lingling Delicata", initial: "L", date: "2 months ago", text: "Rafael and Mario were brilliant. Super reliable and on time, and the conversation was just an added bonus for the journey!" },
+    { name: "Fionna Turner", initial: "F", date: "4 months ago", text: "Always an excellent service, from booking to being dropped off. Always early or on time. Really friendly drivers. 100% reliable. Couldn't recommend them more highly." },
+    { name: "Jonathan Sage", initial: "J", date: "3 months ago", text: "Great service to and from the airport. Priced fairly and would definitely use TN14 Cars again. Quick, simple, convenient, very good communication with the driver and myself. Totally professional." },
+    { name: "K Mortimer", initial: "K", date: "3 months ago", text: "Ray dropped me off at hospital this morning. Arrived on time and the whole experience from booking to payment was really straightforward. Will be using for all my journeys from now on." },
+    { name: "Hayley Bentley", initial: "H", date: "6 months ago", text: "Having used this company for a few years now for our trips to Gatwick and back, we found them great from booking to pickup and return. Used them recently for a long distance wedding drop off and pickup, again amazing. Can highly recommend and will definitely be using again." },
+    { name: "Katy H", initial: "K", date: "8 months ago", text: "Fabulous service yet again. Ian was our driver for an airport pick up following our return from a family holiday. Ian was punctual, great at communicating and a fantastic companion for us all on our journey home. We wouldn't use anyone else for our transfer needs." },
+    { name: "Clair", initial: "C", date: "8 months ago", text: "Brilliant company. Super efficient, friendly, professional, great communication and very helpful. Thank you Ian for dropping us off and lovely Sharon for picking us up. Just amazing service and we will use your services again next year." },
+    { name: "Maisie Farrant", initial: "M", date: "4 months ago", text: "Excellent driver Dean, friendly, approachable. Overall a great journey. Will request him again!" },
+    { name: "Mandy George", initial: "M", date: "7 months ago", text: "Absolutely brilliant taxi company. Highly recommended. Always punctual and with lovely helpful and friendly drivers. The office staff are super helpful and will always try to accommodate any requests even really last minute. I wouldn't use any other taxi company now I've discovered TN14 cars." },
+    { name: "Hayley Brown", initial: "H", date: "8 months ago", text: "Outstanding cab service. Ray arrived right on time and was incredibly helpful. He kept us entertained with his great sense of humor and friendly conversation. We got to Luton with time to spare. Such a genuinely lovely guy." },
+    { name: "Pedro Kutova", initial: "P", date: "8 months ago", text: "Best Taxi service in Kent. Super reliable service, at very competitive costs. Just had Eduardo pick me up at Heathrow, and I am very pleased with service. As usual for TN14, driver sent confirmation messages the night before." },
+    { name: "Keziah Griffin", initial: "K", date: "8 months ago", text: "Always a great journey with Lee. He took my 80 year old mum to the airport recently and really looked after her getting a trolley etc. Always great service from TN14 cars, they go over and above." },
+    { name: "Scott Richman", initial: "S", date: "8 months ago", text: "Our go-to for airport transfers. We've used TN14 for several years now and never been disappointed. Just been picked up by Ian, who we've had before, and received great service as usual. On time, good prices, nice vehicles, nice drivers." },
+    { name: "Louise Harrison", initial: "L", date: "8 months ago", text: "I've used TN14Cars several times for business and personal travel. They are always spot on. Immaculate vehicles, friendly service and completely reliable. I highly recommend." },
+    { name: "Henry Rodgers", initial: "H", date: "10 months ago", text: "Dean is a brilliant driver, very professional. Made our journey to and from Southampton stress free. Was there as we stepped off the ship. Highly recommend TN14 Cars. Great service. Thanks again, Rodgers family." },
+    { name: "Anne Severs", initial: "A", date: "10 months ago", text: "I would like to congratulate your company for the excellent service. I have never before experienced any self-introductory message from a driver, confirming collection time and date. I was driven by Andriele and Rafael and they were both polite and professional." },
+    { name: "Emily Gassler", initial: "E", date: "10 months ago", text: "Most reasonable priced taxi company and the most polite and reliable. Are always happy to help with quotes and if you need to change a pick up time. They are very prompt on replying. The taxis are always clean and welcoming and the drivers are so lovely. This is my go to taxi company." },
+    { name: "Sharon Brooks", initial: "S", date: "11 months ago", text: "TN14 Cars provide an excellent service. They are always punctual, the drivers professional and the journey to the airport smooth. Eduardo our driver this morning was very friendly, professional and personable. We can thoroughly recommend this taxi service." },
+    { name: "Charley Smeeth", initial: "C", date: "10 months ago", text: "I have used TN14 cars several times, and their service is incredible. There has often been times I have travelled alone late at night and they have always made me feel comfortable and completely safe. Cannot recommend highly enough." },
+    { name: "Megan Turrell", initial: "M", date: "10 months ago", text: "I think I've already left a review for these guys but they always warrant a boost. Best taxi company in the area, used countless times for airport runs and never had a problem. Reasonably priced, very flexible and every single driver is super friendly." },
+    { name: "Martin and Clare Cooley", initial: "M", date: "10 months ago", text: "Dean's communication was great, arrived on time, very friendly, great service. Excellent price for airport run. Definitely recommend TN14 Cars. Thank you." },
+    { name: "Serena Watts", initial: "S", date: "10 months ago", text: "TN14 cars are the best taxi service I have ever used. All the drivers have been lovely, so helpful, reliable, always early or on time, even at very late or very early times of the day, and always with good communication. They take a lot of the stress out of travelling. I will always use them." },
+    { name: "Carol Annesley", initial: "C", date: "10 months ago", text: "Best taxi service in the area. Definitely 5 stars all round. Easy to book and communication is great, kept well informed on driver arrival. Drivers really friendly and helpful. Highly recommend." },
+    { name: "Bromley Eagle", initial: "B", date: "11 months ago", text: "Always an excellent service. Drivers are prompt, friendly, helpful and the cars are clean. Booking is straightforward and prices are very fair. I would thoroughly recommend using TN14 Cars if you want peace of mind that your booking will go smoothly." },
+    { name: "Maki Baxter", initial: "M", date: "8 months ago", text: "Have had Joe to Heathrow, and Shaeky drive us back. Both were on time, and very good with communication. Many thanks!" },
+    { name: "Robert Wild", initial: "R", date: "11 months ago", text: "Dean picked our group up for our Gatwick leg earlier than originally planned at our request. He was very courteous and happy to help with bags. He was very upbeat and drove well. Wish all drivers were this good." },
+    { name: "Virginia Garvin", initial: "V", date: "a year ago", text: "Highly recommended service. Punctual, very good prices, polite drivers, good communication with customers regarding locations, waiting times etc. I use them frequently for Gatwick airport collection and pick up." },
+    { name: "Samantha Sykes", initial: "S", date: "9 months ago", text: "I have used TN14 cars twice now for going to and from Gatwick. The service has been flawless. I book via WhatsApp and the person organising is very helpful and efficient. The drivers have arrived a couple of minutes early, they are polite and professional." },
+    { name: "Chris Pollard", initial: "C", date: "a year ago", text: "Excellent service. Driver phoned me in advance to tell me the time he would arrive. Smooth journey to the airport. Great start to the trip." },
+    { name: "Kate Golding", initial: "K", date: "10 months ago", text: "We were met by Rafael who was on time and very pleasant. We have used TN14 many times and they have always been prompt and the office staff are efficient and nice to deal with. Thank you." },
+    { name: "Janet Luxford", initial: "J", date: "10 months ago", text: "We were picked up in plenty of time by Rafael who was just lovely. Friendly chatty and the journey to Gatwick went very quickly. We would highly recommend this service for a stress free start to your journey." },
+    { name: "Kerry White", initial: "K", date: "a year ago", text: "Thank you TN14 cars and especially our driver Ray for an easy, stress-free trip to Gatwick. Ray was just amazing. He made the return journey after a family drop off a little less sad. Thank you for your great service." },
+    { name: "Adalberto Montini", initial: "A", date: "a year ago", text: "Great service from our driver Lee this evening from TN14 cars. Great communication, on time and excellent driving in a very clean and comfortable car. Would highly recommend." },
+    { name: "Sal Tunio", initial: "S", date: "a year ago", text: "Always reliable and respectful, even for my super early 4:00 am pickups. Arrives on time, keeps things quiet so the neighbors aren't disturbed, and plays relaxing music that lets me get a bit more rest during the ride. Highly recommend for anyone needing a professional and stress-free taxi service." },
+    { name: "Kyle Shadbolt", initial: "K", date: "a year ago", text: "Really easy and smooth process booking TN14 cars. Lee our driver to Heathrow was very friendly and very prompt. We changed our departure time the night before by half an hour and it was very easy to do. I just sent a WhatsApp message and it was all confirmed within 5 mins of the change." },
+    { name: "Lucy Barrie", initial: "L", date: "10 months ago", text: "Our driver was not only early, but he was very friendly, very chatty and helped with luggage. Our estate car was very clean. Couldn't be happier!" },
+    { name: "Jo Davies", initial: "J", date: "11 months ago", text: "Excellent. Made the airport pick up very straightforward, perfect communications and impeccable driving. Will only ever use Lee for this transfer from now on." },
+    { name: "Gary Davison", initial: "G", date: "a year ago", text: "I've used these guys for airport transfers but this was the first time for a 12:30 am pick up from a London function back to Sevenoaks. Great service thank you Ian. Thoroughly recommend." },
+    { name: "Cassie Chandler", initial: "C", date: "3 months ago", text: "Rafael was friendly, helpful, polite and was there 10 mins early. Provided us with water, mints etc. Gold star service from TN14 cars as usual." },
+    { name: "Simon Horton", initial: "S", date: "8 months ago", text: "Shakey was very friendly, great help, punctual and reasonably priced. Was able to book short notice easily over WhatsApp." },
+    { name: "Olivia Russell", initial: "O", date: "2 years ago", text: "Picked up on time both ways for a return airport trip, by friendly drivers Eduardo and Abbas. Very clean cars, both accommodating helping us to put the child seat in, plenty of space in cars. Very comfortable easy trips. Would use again." },
+    { name: "Danielle Bailey", initial: "D", date: "2 years ago", text: "We used TN14Cars for our airport run, the guy who took us was very polite, and chatty. He made our journey comfortable and straightforward with 2 young children. Highly recommend! Thankyou for a great service." },
+    { name: "Rich Lakin", initial: "R", date: "a year ago", text: "Airport run to Gatwick. On time. Polite. Simple booking via WhatsApp. Well priced. Straightforward meeting instructions on return journey. Have used before, and will use again. Highly recommend." },
+    { name: "Ella Gordon-Kind", initial: "E", date: "a year ago", text: "I couldn't recommend this company enough, Jack especially. Today I had to go and do something really emotional and Jack did everything he could to make it easier for me. So friendly and kind even the staff over the phone, super helpful and supportive. Thank you everyone." },
+    { name: "Jackie Murrell", initial: "J", date: "11 months ago", text: "Fantastic service, reliable and good value. Have used them many times and they never let me down." },
+    { name: "Ian McLeod", initial: "I", date: "a year ago", text: "First time user. Brilliant service, and a lovely driver Eduardo. Absolutely no doubt we'll use again. Well done." },
+    { name: "Claire E", initial: "C", date: "2 years ago", text: "We have used James and he has always been very polite, helpful, punctual and has always helped to fit with the timings needed. I will always use James. Thank you." },
+    { name: "Hanna Bates-Martens", initial: "H", date: "10 months ago", text: "Always very reliable, professional and friendly. Couldn't recommend them enough." },
+    { name: "Jack Fuller", initial: "J", date: "2 years ago", text: "My family and I always use TN14 cars. They are always professional, punctual and always a great service." },
+    { name: "Jiangjiang Feng", initial: "J", date: "a year ago", text: "That is a super quick airport trip, my driver Abbas was nice and kind, that's my second time with him. Brilliant, always chose TN14 cars for sure." }
   ];
 
   function renderReviewBatch() {
@@ -627,23 +645,9 @@
     if (!reviewsSection) return;
     const container = reviewsSection.querySelector('.max-w-6xl');
     if (!container) return;
-    const now = Date.now();
-    const storedTs  = localStorage.getItem('tn14_batch_ts');
-    const storedIdx = localStorage.getItem('tn14_batch_idx');
-    let currentBatch = 0;
-    if (storedTs && storedIdx) {
-      if (now - parseInt(storedTs) > 4 * 60 * 60 * 1000) {
-        currentBatch = (parseInt(storedIdx) + 1) % Math.ceil(allReviews.length / 6);
-        localStorage.setItem('tn14_batch_ts',  now.toString());
-        localStorage.setItem('tn14_batch_idx', currentBatch.toString());
-      } else {
-        currentBatch = parseInt(storedIdx);
-      }
-    } else {
-      localStorage.setItem('tn14_batch_ts',  now.toString());
-      localStorage.setItem('tn14_batch_idx', '0');
-    }
-    const batchReviews = allReviews.slice(currentBatch * 6, currentBatch * 6 + 6);
+    const totalBatches = Math.ceil(allReviews.length / 6);
+    const randomBatch = Math.floor(Math.random() * totalBatches);
+    const batchReviews = allReviews.slice(randomBatch * 6, randomBatch * 6 + 6);
     container.querySelectorAll('.grid').forEach(g => g.remove());
     const grid = document.createElement('div');
     grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
