@@ -53,7 +53,7 @@
       background: #000; border-radius: 16px; padding: 40px;
       display: flex; align-items: center; gap: 36px; margin-bottom: 36px;
     }
-    .qr-box { background: #fff; padding: 14px; border-radius: 8px; flex-shrink: 0; }
+    .qr-box { background: #FFD700; padding: 14px; border-radius: 8px; flex-shrink: 0; }
     .qr-text h3 { font-size: 24px; font-weight: 900; color: #FFD700; margin-bottom: 10px; line-height: 1.15; }
     .qr-text p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; }
     .qr-url { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 14px; font-family: 'Courier New', monospace; word-break: break-all; }
@@ -99,6 +99,37 @@
     .review-qr-row { display: flex; align-items: center; justify-content: center; gap: 22px; }
     .review-qr-box { background: #fff; padding: 10px; border-radius: 8px; }
     .review-qr-label { font-size: 12px; color: rgba(255,255,255,0.5); text-align: left; line-height: 1.6; }
+
+    /* RETAINER */
+    .retainer-hero {
+      background: #000; border-radius: 16px; padding: 36px 40px;
+      display: flex; gap: 36px; margin-bottom: 32px; color: #fff;
+    }
+    .retainer-hero-left { flex-shrink: 0; min-width: 200px; }
+    .retainer-price-tag {
+      display: inline-block; background: #FFD700; color: #000;
+      font-size: 30px; font-weight: 900; padding: 10px 18px;
+      border-radius: 10px; margin-bottom: 16px; line-height: 1;
+    }
+    .retainer-price-tag span { font-size: 13px; font-weight: 700; }
+    .retainer-hero-left h3 {
+      font-size: 24px; font-weight: 900; color: #FFD700; line-height: 1.15;
+    }
+    .retainer-hero-right p {
+      font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 12px;
+    }
+    .retainer-note {
+      margin-top: 4px; font-size: 12px; color: rgba(255,255,255,0.5);
+      letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .extras-header {
+      font-size: 18px; font-weight: 800; margin-bottom: 14px; color: #000;
+    }
+    .retainer-closer {
+      margin-top: 24px; font-size: 13px; color: #444; line-height: 1.7;
+      background: #fffbe5; border-left: 3px solid #FFD700;
+      padding: 14px 18px; border-radius: 0 6px 6px 0;
+    }
 
     /* FOOTER */
     .doc-footer {
@@ -296,9 +327,61 @@
   </div>
 </div>
 
-<!-- PAGE 4: CLOSING -->
+<!-- PAGE 4: BEYOND LAUNCH (RETAINER) -->
 <div class="page">
-  <div class="section-tag"><div class="dot"></div>Section four · You're set</div>
+  <div class="section-tag"><div class="dot"></div>Section four · If you want help going further</div>
+  <h2>Beyond launch.</h2>
+  <p class="section-intro">The website is yours, the QR code is yours, and you can run with all of it from here. If you would rather not have to think about it, we offer a small monthly arrangement that takes the upkeep off your plate, plus a few extra things that quietly grow a taxi business over time. None of it is required. The site keeps working without it.</p>
+
+  <div class="retainer-hero">
+    <div class="retainer-hero-left">
+      <div class="retainer-price-tag">£35 <span>/ month</span></div>
+      <h3>Monthly support</h3>
+    </div>
+    <div class="retainer-hero-right">
+      <p>The site is reviewed every month and anything that needs updating, fixing, or refreshing is handled. Hosting stays paid and live in the background. You get one short check-in each month to flag anything you would like changed.</p>
+      <p class="retainer-note">Cancel any time. There is no tie-in.</p>
+    </div>
+  </div>
+
+  <h3 class="extras-header">Extras, when you want them.</h3>
+  <div class="uses-grid">
+    <div class="use-item">
+      <div class="use-icon">📅</div>
+      <div>
+        <h4>Driver and licence reminders</h4>
+        <p>A private tracker for MOTs, taxi licences, and insurance renewals across your fleet. A reminder lands on your phone or by email a few weeks before each one expires, so nothing gets missed. Quoted by fleet size.</p>
+      </div>
+    </div>
+    <div class="use-item">
+      <div class="use-icon">🪪</div>
+      <div>
+        <h4>Taxi licence application support</h4>
+        <p>For a new driver joining the fleet, we can run the Sevenoaks District Council paperwork, the medical and DBS process, and the insurance addition end to end. One contact, one process. Quoted per driver.</p>
+      </div>
+    </div>
+    <div class="use-item">
+      <div class="use-icon">💬</div>
+      <div>
+        <h4>WhatsApp and bookings</h4>
+        <p>WhatsApp auto-replies, online booking forms, and customer follow-up messages. The small things that make enquiries easier to handle and harder to lose.</p>
+      </div>
+    </div>
+    <div class="use-item">
+      <div class="use-icon">⭐</div>
+      <div>
+        <h4>Anything else digital</h4>
+        <p>Google review capture cards, signage, social posts, ad campaigns. If it is digital and helps the business, that is what we are here for. Quoted before any work begins, so the cost is always clear.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="retainer-closer">The £35 retainer covers monthly support. Anything in the grid above is quoted before it starts, so you always know the cost up front.</p>
+</div>
+
+<!-- PAGE 5: CLOSING -->
+<div class="page">
+  <div class="section-tag"><div class="dot"></div>Section five · You're set</div>
   <h2>Welcome online.</h2>
   <p class="section-intro">Your website is live. Your QR code is ready to use anywhere you like. Once you have bought your domain and connected your platforms, you will be in a stronger position online than most local businesses in Kent.</p>
 
@@ -322,7 +405,7 @@
   new QRCode(document.getElementById('qr-main'), {
     text: 'https://tokelomogorosi-ctrl.github.io/tn14-cars-website/',
     width: 170, height: 170,
-    colorDark: '#000000', colorLight: '#ffffff',
+    colorDark: '#000000', colorLight: '#FFD700',
     correctLevel: QRCode.CorrectLevel.H
   });
 </script>
